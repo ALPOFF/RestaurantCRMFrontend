@@ -20,15 +20,6 @@ const TablesCfgComponent = () => {
   }, []);
   return (
     <div className="tables-cfg">
-      {restPic == "" && (
-        <div style={{ position: "absolute" }}>
-          <img
-            src="https://c.tenor.com/8KWBGNcD-zAAAAAC/loader.gif"
-            alt=""
-            srcset=""
-          />
-        </div>
-      )}
       <div className="tables-cfg-title">Конфигурирование столиков</div>
       <div className="tables-cfg-container">
         <TablePosComponent tablePlanPhoto={tablesCfg.tables_plan_photo} />
