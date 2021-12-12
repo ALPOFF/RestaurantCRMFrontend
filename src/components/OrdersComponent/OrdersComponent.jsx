@@ -3,13 +3,17 @@ import { mainAPI } from "../../common/api/api";
 import { Redirect } from "react-router-dom";
 import ChildOrderComponent from "./ChildOrderComponent/ChildOrderComponent";
 import "./OrdersComponent.css";
+import { connect } from "react-redux";
+import { setLoading } from "./../../state/main-reducer";
 
-const OrdersComponent = () => {
+const OrdersComponent = (props) => {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
+    props.setLoading(true);
     mainAPI.getOrders().then((data) => {
       console.log(data);
       setOrders(data);
+      props.setLoading(false);
     });
   }, []);
 
@@ -31,4 +35,4 @@ const OrdersComponent = () => {
   );
 };
 
-export default OrdersComponent;
+export default connect(null, { setLoading })(OrdersComponent);

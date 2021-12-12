@@ -3,11 +3,14 @@ import TablePosComponent from "./TablePosComponent/TablePosComponent";
 import "./TablesCfgComponent.css";
 import { useEffect, useState } from "react";
 import { mainAPI } from "../../../common/api/api";
+import { connect } from "react-redux";
+import { setLoading } from "./../../../state/main-reducer";
 
-const TablesCfgComponent = () => {
+const TablesCfgComponent = (props) => {
   const [tablesCfg, setTablesCfg] = useState({});
   const [restPic, setRestPic] = useState("");
   useEffect(() => {
+    props.setLoading(true);
     mainAPI.getTablesConf().then((data) => {
       console.log(data);
       setTablesCfg(data);
@@ -16,6 +19,7 @@ const TablesCfgComponent = () => {
     mainAPI.getRestaurantInfo().then((data) => {
       console.log(data);
       setRestPic(data.restaurant_photo);
+      props.setLoading(false);
     });
   }, []);
   return (
@@ -29,4 +33,8 @@ const TablesCfgComponent = () => {
   );
 };
 
-export default TablesCfgComponent;
+const mapStateToProps = (state) => ({
+  loading: state.mainReducer.loading,
+});
+
+export default connect(mapStateToProps, { setLoading })(TablesCfgComponent);
