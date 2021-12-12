@@ -1,0 +1,17 @@
+.login {
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25%;
+}
+.login-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.login-item span {
+  text-align: center;
+  padding-bottom: 10px;
+}

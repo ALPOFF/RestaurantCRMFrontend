@@ -1,0 +1,7 @@
+.tables-pos {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  border: 1px solid lightgray;
+  height: 300px;
+}

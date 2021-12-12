@@ -1,0 +1,12 @@
+.order-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-child-container {
+  border: 1px solid lightgray;
+  width: 95%;
+  height: 95%;
+}

@@ -1,0 +1,10 @@
+.tables-cfg {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.tables-cfg-container {
+  display: flex;
+  justify-content: space-between;
+}

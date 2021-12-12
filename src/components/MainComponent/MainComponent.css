@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  text-align: center;
+  border: 1px solid lightgray;
+}
+
+.nav-item {
+  padding: 10px 0;
+  outline: 1px solid lightgray;
+}
