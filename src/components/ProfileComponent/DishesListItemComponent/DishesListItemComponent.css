@@ -1,0 +1,7 @@
+.dish-item {
+   margin: 10px;
+   display: flex;
+}
+.dish-item__descr {
+   margin: 0 10px;
+}

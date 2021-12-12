@@ -18,7 +18,7 @@ const DishesListComponent = () => {
         {dishesList.map((el) => (
           <DishesListItemComponent el={el} />
         ))}
-        <div>
+        <div className="dishes-button">
           <button>Добавить</button>
           <button>Удалить</button>
         </div>

@@ -6,18 +6,33 @@ import { mainAPI } from "../../../common/api/api";
 
 const TablesCfgComponent = () => {
   const [tablesCfg, setTablesCfg] = useState({});
+  const [restPic, setRestPic] = useState("");
   useEffect(() => {
     mainAPI.getTablesConf().then((data) => {
       console.log(data);
       setTablesCfg(data);
     });
+
+    mainAPI.getRestaurantInfo().then((data) => {
+      console.log(data);
+      setRestPic(data.restaurant_photo);
+    });
   }, []);
   return (
     <div className="tables-cfg">
-      Конфигурирование столиков
+      {restPic == "" && (
+        <div style={{ position: "absolute" }}>
+          <img
+            src="https://c.tenor.com/8KWBGNcD-zAAAAAC/loader.gif"
+            alt=""
+            srcset=""
+          />
+        </div>
+      )}
+      <div className="tables-cfg-title">Конфигурирование столиков</div>
       <div className="tables-cfg-container">
-        <TablePosComponent tablePlanPhoto={tablesCfg.table_plan_photo} />
-        <RestPicComponent restaurantPhoto={tablesCfg.restaurant_photo} />
+        <TablePosComponent tablePlanPhoto={tablesCfg.tables_plan_photo} />
+        <RestPicComponent restaurantPhoto={restPic} />
       </div>
     </div>
   );

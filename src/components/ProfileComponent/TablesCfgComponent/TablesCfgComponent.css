@@ -2,9 +2,17 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 .tables-cfg-container {
   display: flex;
   justify-content: space-between;
+}
+
+.tables-cfg-title {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   margin-bottom: 3px;
 }

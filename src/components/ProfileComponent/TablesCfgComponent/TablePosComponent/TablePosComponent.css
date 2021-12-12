@@ -4,4 +4,26 @@
   width: 48%;
   border: 1px solid lightgray;
   height: 300px;
+  position: relative;
+}
+
+.table-pos__buttons {
+   width: 100%;
+   position: absolute;
+   bottom: 10px;
+   display: flex;
+   justify-content: space-around;
+}
+
+.tables-pos__pic {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   justify-content: center;
+}
+
+.table-pos__title {
+   display: flex;
+   width: 100%;
+   justify-content: center;
 }

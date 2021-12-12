@@ -3,13 +3,15 @@ import "./RestPicComponent.css";
 const RestPicComponent = ({ restaurantPhoto }) => {
   return (
     <div className="rest-pic">
-      <div>Фотография ресторана</div>
+      <div className="rest-pic__title">Фотография ресторана</div>
       <div>
-        <img src={restaurantPhoto} alt={restaurantPhoto} />
-      </div>
-      <div>
-        <button>Изменить</button>
-        <button>Сохранить</button>
+        <div className="rest-pic__pic">
+          <img src={restaurantPhoto} alt={restaurantPhoto} height={200} />
+        </div>
+        <div className="rest-pic__buttons">
+          <button>Изменить</button>
+          <button>Сохранить</button>
+        </div>
       </div>
     </div>
   );

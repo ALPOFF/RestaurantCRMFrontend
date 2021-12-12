@@ -2,10 +2,18 @@
   border: 1px solid lightgray;
   width: 100%;
   height: 300px;
+  position: relative;
 }
 .dishes {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 48%;
+}
+.dishes-button {
+   width: 100%;
+   position: absolute;
+   bottom: 10px;
+   display: flex;
+   justify-content: space-around;
 }

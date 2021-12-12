@@ -4,7 +4,7 @@ export const mainAPI = {
   getOrders() {
     return axios
       .get(
-        `https://bonch-hack-restaurant-crm-api.herokuapp.com/api/v1/claims`,
+        `https://bonch-hack-restaurant-crm-api.herokuapp.com/api/v1/claims?login=Alex`,
         {
           withCredentials: true,
         }
@@ -16,7 +16,7 @@ export const mainAPI = {
   getRestaurantInfo() {
     return axios
       .get(
-        `https://bonch-hack-restaurant-crm-api.herokuapp.com/api/v1/restaurant_info`,
+        `https://bonch-hack-restaurant-crm-api.herokuapp.com/api/v1/restaurant_info?login=Alex`,
         {
           withCredentials: true,
         }
@@ -28,7 +28,7 @@ export const mainAPI = {
   getTablesConf() {
     return axios
       .get(
-        `https://bonch-hack-restaurant-crm-api.herokuapp.com/api/v1/tables_configuration`,
+        `https://bonch-hack-restaurant-crm-api.herokuapp.com/api/v1/tables_configuration?login=Alex`,
         {
           withCredentials: true,
         }
@@ -40,7 +40,7 @@ export const mainAPI = {
   getDishesList() {
     return axios
       .get(
-        `https://bonch-hack-restaurant-crm-api.herokuapp.com/api/v1/dishes_list`,
+        `https://bonch-hack-restaurant-crm-api.herokuapp.com/api/v1/dishes_list?login=Alex`,
         {
           withCredentials: true,
         }

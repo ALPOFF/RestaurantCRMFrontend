@@ -1,11 +1,16 @@
+import "./DishesListItemComponent.css";
+
 const DishesListItemComponent = ({ el }) => {
   return (
-    <div>
+    <div className="dish-item">
       <div>
-        <img src={el.photo_path} alt={el.photo_path} />
+        <img src={el.photo} alt={el.photo} height={100} />
       </div>
-      <div>
-        {el.title} {el.description}/{el.recipe}
+      <div className="dish-item__descr">
+        <h4>{el.title}</h4>
+        <div>
+          {el.description}/{el.recipe}
+        </div>
       </div>
     </div>
   );

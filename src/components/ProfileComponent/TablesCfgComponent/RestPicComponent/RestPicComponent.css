@@ -1,7 +1,29 @@
 .rest-pic {
+position: relative;
   display: flex;
   flex-direction: column;
   width: 48%;
   border: 1px solid lightgray;
   height: 300px;
+}
+
+.rest-pic__buttons {
+   width: 100%;
+   position: absolute;
+   bottom: 10px;
+   display: flex;
+   justify-content: space-around;
+}
+
+.rest-pic__pic {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   justify-content: center;
+}
+
+.rest-pic__title {
+   display: flex;
+   width: 100%;
+   justify-content: center;
 }
